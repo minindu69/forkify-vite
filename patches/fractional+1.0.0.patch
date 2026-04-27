@@ -1,0 +1,22 @@
+diff --git a/node_modules/fractional/index.js b/node_modules/fractional/index.js
+index 57a1bd8..e627d4c 100644
+--- a/node_modules/fractional/index.js
++++ b/node_modules/fractional/index.js
+@@ -69,7 +69,7 @@ THE SOFTWARE.
+  *      new Fraction('2 3/4') --> 11/4  (prints as 2 3/4)
+  *
+  */
+-Fraction = function(numerator, denominator)
++var Fraction = function(numerator, denominator)
+ {
+     /* double argument invocation */
+     if (typeof numerator !== 'undefined' && denominator) {
+@@ -85,7 +85,7 @@ Fraction = function(numerator, denominator)
+         }
+     /* single-argument invocation */
+     } else if (typeof denominator === 'undefined') {
+-        num = numerator; // swap variable names for legibility
++        var num = numerator; // swap variable names for legibility
+         if (typeof(num) === 'number') {  // just a straight number init
+             this.numerator = num;
+             this.denominator = 1;
