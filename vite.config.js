@@ -1,7 +1,6 @@
 import { defineConfig } from "vite";
 
-export default defineConfig(() => {
-  // Read custom environment variable
+export default defineConfig(({ mode }) => {
   const isGitHubPages = process.env.DEPLOY_TARGET === "gh-pages";
 
   return {
