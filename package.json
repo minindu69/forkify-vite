@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:gh": "set DEPLOY_TARGET=gh-pages && vite build",
     "preview": "vite preview",
     "deploy": "gh-pages -d dist",
     "postinstall": "patch-package"
